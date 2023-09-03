@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <div class="container">
+  <h1>QR Code Generator</h1>
+  
+  <form action="/" method="post">
+    <input type="text" name="url" placeholder="e.g. https://google.com">
+    <button type="submit">Generate QR Code</button>
+  </form>
+  
+  <% if (locals.qrUrl) { %>
+    <img src="<%= qrUrl %>" alt="QR Code">
+    <p><%=url%></p>
+    <a href="<%= qrUrl %>" download="qrcode.png">Download</a>
+    
+  <% } %>
+</div>
+</body>
+</html>
